@@ -89,3 +89,8 @@
 .intro {
     margin: 4rem;
 }
+
+.error-message {
+    text-align: center;
+    color: red;
+}
