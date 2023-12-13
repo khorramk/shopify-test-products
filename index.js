@@ -20,6 +20,7 @@ function fetchProductsFromShopify () {
         })
         .catch((err) => {
             console.error(err);
+            document.getElementById('main').innerHTML = '<h1 class="error-message">Failed to get products. Please contact us.</h1>'
         })
 }
 
