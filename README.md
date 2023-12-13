@@ -8,7 +8,7 @@ No framework is being used, so use any local server of your choice that supports
 
 ## To see the work
 
-To see the work just a normal server. in this case live serve vs code extension. first thing you will notice is an error page. that is normal.
+To see the work just a start a normal server. In this case live server vs code extension. First thing you will notice is an error page. That is normal.
 
 1. Alter the code in js file, line 7: 
 
