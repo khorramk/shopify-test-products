@@ -1,14 +1,3 @@
-//make functions
-//fetch products
-//convert products data to html contents for the browser
-
-/**
- * This is a inital starter function.
- * 
- * @return void 
- *
- */
-
 function init () {
     fetchProductsFromShopify()
 }
@@ -38,7 +27,7 @@ function mapDataFromProducts(products) {
     return products.map(function (product) {
         return {
             productTitle: product.title,
-            customerGender: extractGenderFromTags(product.tags),
+            productGenderType: extractGenderFromTags(product.tags),
             productPrice: getPriceFromFirstVariant(product.variants),
             productPageLink: product.handle,
             productImageSrc: findTheCorrectImage(product)
@@ -62,25 +51,27 @@ function findTheCorrectImage(product) {
     });
 }
 
-function convertNewDataToHTmlContent(data) {
+function convertNewDataToHtmlContent(data) {
     let html = '<ul class="products">';
     
     for (const item of data) {
          html += `<li class="product">
-                        <a href="${item.link}" class="product_link">
-                            <span class="product_type-gender" role="status" aria-label="Gender of customers for product">${item.gender}</span>
-                            <img class="product_image" src="${item.imageSrc.src}" width="${item.imageSrc.width}" height="${item.imageSrc.height}" alt="${item.title}" srcset="">
-                            <h2 class="product_title">
-                                ${item.title}
+                        <a href="${item.productPageLink}" class="product__link">
+                            <span class="product__type-gender" role="status" aria-label="Product gender type">${item.productGenderType}</span>
+                            <img class="product__image" src="${item.productImageSrc.src}" width="${item.productImageSrc.width}" height="${item.productImageSrc.height}" alt="${item.title}" srcset="">
+                            <h2 class="product__title">
+                                ${item.productTitle}
                             </h2>
-                            <dd class="product_description">
-                                <dt class="product_description__price-label">Price</dt>
-                                <dl class="product_description__price-value">${item.price}</dl>
+                            <dd class="product__description">
+                                <dt class="product__description___price-label">Price</dt>
+                                <dl class="product__description___price-value">${item.productPrice}</dl>
                             </dd>
-                            <span class="shop-now">${item.title}</span>
+                            <span class="product__description___action-btn">Shop now</span>
                         </a>
                     </li>`;
     }
 
   return html;
 }
+
+init();
