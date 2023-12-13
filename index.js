@@ -3,7 +3,8 @@ function init () {
 }
 
 function fetchProductsFromShopify () {
-    const shopifyUrl = '';
+    //add store url on the below variable
+    const shopifyUrl = '';// here
     
     fetch(shopifyUrl)
         .then(function (response) {
