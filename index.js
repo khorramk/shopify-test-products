@@ -14,6 +14,15 @@ function init () {
 }
 
 function fetchProductsFromShopify () {
-//   TODO:
-//    fetch product from shopify
+    const shopifyUrl = '';
+    
+    fetch(shopifyUrl).then(function (response) {
+        return response.json();
+    }).then(function (response) {
+        return response.products
+    }).catch(function (err) {
+        console.error(err.message);
+    })
+
+    
 }
