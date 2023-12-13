@@ -10,7 +10,7 @@ No framework is being used, so use any local server of your choice that supports
 
 To see the work just a normal server. in this case live serve vs code extension. first thing you will notice is an error page. that is normal.
 
-1. Alter the code in js file: 
+1. Alter the code in js file, line 7: 
 
 ```function fetchProductsFromShopify () {
     const shopifyUrl = 'https://mystoreurlexample';// here
