@@ -4,7 +4,7 @@ function init () {
 
 function fetchProductsFromShopify () {
     //add store url on the below variable
-    const shopifyUrl = '';// here
+    const shopifyUrl = '';// here add the product json endpoint
     
     fetch(shopifyUrl)
         .then(function (response) {

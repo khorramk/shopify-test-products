@@ -10,10 +10,10 @@ No framework is being used, so use any local server of your choice that supports
 
 To see the work just a start a normal server. In this case live server vs code extension. First thing you will notice is an error page. That is normal.
 
-1. Alter the code in js file, line 7: 
+1. Alter the code in index.js file, line 7: 
 
 ```function fetchProductsFromShopify () {
-    const shopifyUrl = 'https://mystoreurlexample';// here
+    const shopifyUrl = 'https://mystoreurlexample';// here make sure to add url of the store and json endpoint.
 ```
 2. Once added refresh your server on the browser or refresh browser.
 
